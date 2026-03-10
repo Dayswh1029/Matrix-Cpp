@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-
+#include<initializer_list>
 class Matrix
 {
     private:
@@ -51,6 +51,17 @@ class Matrix
             }
             this->_rows = other._rows;  // 
             this->_cols = other._cols;  // 
+            return *this;
+        }
+
+        Matrix& operator=(std::initializer_list<float> list)
+        {
+            size_t i = 0;
+            for(float val : list)
+            {
+                if(i >= _rows * _cols) break;
+                _data[i++] = val;
+            }
             return *this;
         }
 

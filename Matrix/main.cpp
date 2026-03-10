@@ -21,7 +21,12 @@ int main()
     
     d = b;
     std::cout << "After assignment,d is:\n" << d;
-    
+    // 完成 {} 的初始化！
+    Matrix M(2,3);
+    M= {1,2,3,4,5,6};
+    std::cout << "After assignment,M is:\n" << M;
+
+
     return 0;
 }
 
